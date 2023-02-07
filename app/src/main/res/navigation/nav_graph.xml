@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.shashankbhat.notesapp.ui.ShowAllNotes"
+        android:label="@string/home"/>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.shashankbhat.notesapp.ui.SettingsFragment"
+        android:label="@string/settings" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.shashankbhat.notesapp.ui.AboutApp"
+        android:label="@string/about" />
+</navigation>

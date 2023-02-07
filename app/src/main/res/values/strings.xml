@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Notes App</string>
+
+    <!-- Main menu options -->
+    <string name="settings">Settings</string>
+    <string name="delete_all">Delete all</string>
+
+    <!-- Navigation page names -->
+    <string name="nav_open">Navigation Open</string>
+    <string name="nav_close">Navigation Close</string>
+    <string name="page_2">Page 2</string>
+    <string name="page_1">Page 1</string>
+
+    <!-- Add notes page related texts -->
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+
+    <!-- Notes priorities -->
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+
+    <!-- Notification Titles -->
+    <string name="see">"See"</string>
+
+    <!-- Preference Titles -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="language">Language</string>
+
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="channel_description">Notes notification</string>
+    <string name="channel_name">Expiry date</string>
+    <string name="yes">Yes</string>
+    <string name="popup_regarding_notes">Do you want to add notes</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_button">Edit Button</string>
+    <string name="drawer_close">Drawer close</string>
+    <string name="drawer_open">Drawer open</string>
+    <string name="add_widget">Add widget</string>
+    <string name="priority">Priority</string>
+
+    <string name="home">Home</string>
+    <string name="about">About</string>
+
+    <string name="about_app"><big><b>Notes App</b></big> is a good helper to manage your schedules and notes. Write down whats on your mind and get reminder everyday.
+        \n\n<big><b>Key features :</b></big>
+            \n<p>- Add notes quickly with some description and it can be edited be later.</p>
+            \n<p>- Get reminders notification everyday which has date near to present date.</p>
+            \n<p>- Add sticky note widget to your home, easy to open.</p>
+            \n<p>- Add priority to notes which helps reminder to show important note.</p>
+
+        \n\n<big><b>Implementation : </b></big>
+
+        \n\n<p><b>Room Database </b></p>
+        \n<p>It holds all the notes which is basically stores data in <font color="#ACACAC">SQLite</font> database in tables of rows and columns. Each row represents one entity (or record), and each column represents a value in that entity. While creating database it populates data from <font color="#ACACAC">json</font> file.</p>
+
+        \n\n<p><b>Recycler View </b></p>
+        \n<p>It shows list of notes. It display two column list if the device is a tablet or single column for mobile. It shows data from room database with paging of data and the key component is the <font color="#ACACAC">PagedList</font> class.</p>
+
+        \n\n<p><b>Paging Library </b></p>
+        \n<p>The Paging Library helps to load and display small chunks of data at a time. Loading partial data on demand reduces usage of system resources.  Which loads chunks of your app\'s data, or pages. As more data is needed, it\'s paged into the existing <font color="#ACACAC">PagedList</font> object.</p>
+
+        \n\n<p><b>ViewModel</b></p>
+        \n<p>ViewModel is helper class for the UI controller that is responsible for preparing data for the UI. Data is automatically retained during configuration changes so that data they hold is immediately available to the next activity or fragment instance. Creates <font color="#ACACAC">ViewModel</font> instance with <font color="#ACACAC">ViewModelProvider</font>, which will create ViewModels via the custom Factory and retain them in the given store.</p>
+
+        \n\n<p><b>Navigation Drawer</b></p>
+        \n<p>Provides option to move between the screens.</p>
+
+        \n\n<p><b>Content Provider</b></p>
+        \n<p>It presents data to external applications. Access notes data by content uri <font color="#ACACAC">content:\/\/com.shashankbhat.notesapp\/note_table</font> to get all notes data.</p>
+
+        \n\n<p><b>Widget</b></p>
+        \n<p>Add widget to home screen that shows a note and easy to open</p>
+
+        \n\n<p><b>Alarm Manager</b></p>
+        \n<p>It helps basically in scheduling the work. Fires the broadcast message whenever time ticks 12:00 AM and notifies with a note.</p>
+
+        \n\n<p><b>Broadcast Receiver</b></p>
+        \n<p>It does background work when it receives broadcast message from <font color="#ACACAC">AlarmManager</font>. Broadcast receiver initializes a <font color="#ACACAC">Worker</font> and that sends notification.</p>
+
+        \n\n<p><b>Custom view component</b></p>
+        \n<p>Priority of each notes is shown with custom component.</p>
+
+        \n\n <b>GitHub link</b>  <a href="https://github.com/shashank1800/Notes-App">https://github.com/shashank1800/Notes-App</a>
+
+        </string>
+
+</resources>

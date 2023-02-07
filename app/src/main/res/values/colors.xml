@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="mainBackgroundColor">#fff</color>
+
+    <color name="low">#45BA4A</color>
+    <color name="medium">#0576DA</color>
+    <color name="high">#D55986</color>
+
+    <color name="gray">#DAD9D9</color>
+
+<!--    <color name="random_color_1">#FDF7EE</color>-->
+    <color name="random_color_1">#EDFDEE</color>
+    <color name="random_color_2">#E4EEF6</color>
+    <color name="random_color_3">#FDEDF3</color>
+</resources>

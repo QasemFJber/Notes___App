@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="priorityListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="saveListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="description"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:context=".ui.AddNotes">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="@string/title">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_ed"
+                    android:text="@={title}"
+                    android:transitionName="@string/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="@string/description">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_et"
+                    android:text="@={description}"
+                    android:transitionName="@string/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <DatePicker
+                android:id="@+id/date_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:calendarViewShown="false"
+                android:spinnersShown="true"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:id="@+id/priority_tv"
+                style="@style/StyleText.Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="start"
+                android:text="@string/priority" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <RadioButton
+                    android:id="@+id/priority1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/random_color_1"
+                    android:text="@string/low"
+                    android:textSize="14sp"
+                    android:onClick="@{priorityListener}"/>
+
+                <RadioButton
+                    android:id="@+id/priority2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="@string/medium"
+                    android:background="@color/random_color_2"
+                    android:textSize="14sp"
+                    android:onClick="@{priorityListener}"/>
+
+                <RadioButton
+                    android:id="@+id/priority3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="@string/high"
+                    android:background="@color/random_color_3"
+                    android:textSize="14sp"
+                    android:onClick="@{priorityListener}"/>
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/save"
+                android:onClick="@{saveListener}"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
